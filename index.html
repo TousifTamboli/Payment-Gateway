@@ -1,48 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CodePen - CheckOut Page</title>
-  <link rel="stylesheet" href="./style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razorpay Payment</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="mainscreen">
-    <!-- <img src="https://image.freepik.com/free-vector/purple-background-with-neon-frame_52683-34124.jpg"  class="bgimg " alt="">--> 
-      <div class="card">
-        <div class="leftside">
-          <img
-            src="https://i.pinimg.com/originals/18/9d/dc/189ddc1221d9c1c779dda4ad37a35fa1.png"
-            class="product"
-            alt="Shoes"
-          />
-        </div>
-        <div class="rightside">
-          <form action="">
-            <h1>CheckOut</h1>
-            <h2>Payment Information</h2>
-            <p>Cardholder Name</p>
+    <div class="container">
+        <h1>Checkout</h1>
+        <div class="user-info-form">
+            <label for="fullname">Full Name:</label>
             <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
-            <p>Email:</p>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            <p>Mobile:</p>
-            <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
-            <p>Address:</p>
-            <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
-            <p>Amount:</p>
-            <input type="number" id="amount" name="amount" placeholder="Enter amount (in paisa)" required>
-            
 
-<div class="expcvv">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="mobile">Mobile:</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter amount (in paisa)" required>
+
+            <button id="rzp-button">Pay Now</button>
         </div>
-            <p></p>
-            <button type="submit" class="button">CheckOut</button>
-          </form>
-        </div>
-      </div>
     </div>
-<!-- partial -->
-  
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
